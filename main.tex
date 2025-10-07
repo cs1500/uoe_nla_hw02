@@ -31,9 +31,71 @@
 
 \section{Question 1}
 
+\subsection{(i)}
+Let $0<\epsilon\leq1$, and
+$$\mat{A}=\begin{bmatrix}
+    1 & 0 \\
+    0 & \epsilon
+\end{bmatrix}.$$
+We compute the condition numbers in $1$, $2$, and $\infty$-norms. So:
+$$\mat{A}^{-1}=\begin{bmatrix}
+    1 & 0 \\
+    0 & 1/\epsilon
+\end{bmatrix}.$$
+The $1$-norm is max column sum:
+$$||\mat{A}||_1=\max\{1,\epsilon\}=1$$
+$$||\mat{A}^{-1}||_1=\max\{1,1/\epsilon\}=1/\epsilon$$
+while the $2$-norm is the square root of the eigenvalue of $\mat{A}^T\mat{A}$
+with the largest magnitude:
+$$\mat{A}^T\mat{A}=\begin{bmatrix}
+    1 & 0 \\
+    0 & \epsilon^2
+\end{bmatrix}$$
+$$||\mat{A}||_2=1$$
+$$(\mat{A}^{-1})^T\mat{A}^{-1}=\begin{bmatrix}
+    1 & 0 \\
+    0 & 1/\epsilon^2
+\end{bmatrix}$$
+$$||\mat{A}^{-1}||_2=1/\epsilon.$$
+Finally the $\infty$-norm is the max row sum:
+$$||\mat{A}||_\infty=1$$
+$$||\mat{A}^{-1}||_\infty=1/\epsilon.$$
+We are then able to compute the conditon numbers:
+$$\kappa_1(\mat{A})=||\mat{A}||_1 ||\mat{A}^{-1}||_1=1/\epsilon$$
+$$\kappa_2(\mat{A})=||\mat{A}||_2 ||\mat{A}^{-1}||_2=1/\epsilon$$
+$$\kappa_\infty(\mat{A})
+=||\mat{A}||_\infty ||\mat{A}^{-1}||_\infty=1/\epsilon.$$
+
+\subsection{(ii)}
+The condition numbers go to infinity as $\epsilon\rightarrow0$. This is in
+compliance with the definition of condition numbers, since when
+$\epsilon\rightarrow0$:
+$$\mat{A}\rightarrow\begin{bmatrix}
+    1 & 0 \\
+    0 & 0
+\end{bmatrix}$$
+where matrix $\mat{A}$ becomes not invertible, and all $\kappa_p(\mat{A})\
+=\infty$.
+
 \section{Question 2}
 
 \subsection{(i)}
+Let $\mat{I}$ be the $n\times n$ identity matrix. Show that:
+$$||\mat{I}||_p=1$$
+for all $p$-norms.
+
+\noindent\hrulefill
+
+By definition, we have that:
+\begin{align*}
+    ||\mat{I}||_p
+    &=\max_{\mat{x}\neq\mat{0}}
+    \left\{\frac{||\mat{I}\mat{x}||_p}{||\mat{x}||_p}\right\} \\
+    &=\max_{\mat{x}\neq\mat{0}}
+    \left\{\frac{||\mat{x}||_p}{||\mat{x}||_p}\right\} \\
+    &=1
+\end{align*}
+and this applies for any $p$.
 
 \subsection{(ii)}
 We show that if $\mathbf{A}$ is a $n\times n$ invertible matrix, then it's
@@ -45,8 +107,7 @@ where this is true for any $p$-norm.
 
 By definition, we want to show that:
 $$||\mathbf{A}||_p ||\mathbf{A}^{-1}||_p\geq1$$
-where by the definition of the matrix $p$-norm, $\forall\mat{x},
-\mat{y}\neq\vc{0}$:
+where by the definition of the matrix $p$-norm $\mat{y}\neq\vc{0}$:
 $$||\mat{A}||_p=
 \max_{\mat{x}\neq\mat{0}}
 \left\{\frac{||\mat{A}\mat{x}||_p}{||\mat{x}||_p}\right\}$$
@@ -60,7 +121,7 @@ $$||\mathbf{A}||_p ||\mathbf{A}^{-1}||_p
 \frac{||\mat{A}^{-1}\mat{y}||_p}{||\mat{y}||_p}$$
 for any non-zero $\mat{x}$ and $\mat{y}$. But because matrix $\mat{A}$ is
 invertible, it actually defines a bijective linear map between $\mat{x}$ and
-$\mat{y}$ if we define relation $\mat{A}\mat{x}=\mat{y}$, which allow us to
+$\mat{y}$ if we define relation $\mat{A}\mat{x}=\mat{y}$, which allows us to
 conveniently write:
 \begin{align*}
     ||\mathbf{A}||_p ||\mathbf{A}^{-1}||_p
@@ -70,7 +131,7 @@ conveniently write:
     &=
     \frac{||\mat{y}||_p}{||\mat{A}^{-1}\mat{y}||_p}
     \frac{||\mat{A}^{-1}\mat{y}||_p}{||\mat{y}||_p} \\
-    &=1
+    &=1.
 \end{align*}
 
 \end{document}

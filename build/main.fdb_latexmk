@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1759867884.57839 "/home/cs/gitrepos/uoe_nla_hw02/main.tex" "build/main.pdf" "main" 1759867884.89973 0
-  "/home/cs/gitrepos/uoe_nla_hw02/main.tex" 1759867884.42727 2054 1786fe7f584b8430a0a55351bee471a8 ""
+["pdflatex"] 1759878997.8077 "/home/cs/gitrepos/uoe_nla_hw02/main.tex" "build/main.pdf" "main" 1759878998.14092 0
+  "/home/cs/gitrepos/uoe_nla_hw02/main.tex" 1759878997.63821 3914 f5df28bb1b05a98ff5590ce73a796fe8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1246382020 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -69,8 +69,8 @@
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1737590400 40900 887e0dc8cac988a9e9c574af364cf837 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1759283092.72476 4602615 ac1019cb4c4ba39710c2cf7f752b378d ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1759283479 7753791 cb1a6945b6218ee53540bc9a4ea5650c ""
-  "build/main.aux" 1759867884.85354 421 039ca4baabfa88c2676b1bfd6bddd29b "pdflatex"
-  "main.tex" 1759867884.42727 2054 1786fe7f584b8430a0a55351bee471a8 ""
+  "build/main.aux" 1759878998.08969 614 c9ced13ea29df0e9537fe2d94bc86cdb "pdflatex"
+  "main.tex" 1759878997.63821 3914 f5df28bb1b05a98ff5590ce73a796fe8 ""
   (generated)
   "build/main.aux"
   "build/main.log"
