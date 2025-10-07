@@ -12,6 +12,16 @@
     bottom=20mm
 }
 
+% commands
+\newcommand{\deq}{\vcentcolon=}
+\newcommand{\idd}{\text{đ}}
+\newcommand{\nimplies}{\centernot\implies}
+\newcommand{\vc}[1]{\boldsymbol{#1}}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\mat}[1]{\mathbf{#1}}
+\newcommand{\hess}[1]{\vc{\nabla}^2 f(\vc{#1})}
+
 \title{nla hw02}
 \author{cs}
 
@@ -19,6 +29,48 @@
 
 \maketitle
 
-this is a test
+\section{Question 1}
+
+\section{Question 2}
+
+\subsection{(i)}
+
+\subsection{(ii)}
+We show that if $\mathbf{A}$ is a $n\times n$ invertible matrix, then it's
+conditional number must be greater or equal to one:
+$$\kappa_p(\mathbf{A})\geq1$$
+where this is true for any $p$-norm.
+
+\noindent\hrulefill
+
+By definition, we want to show that:
+$$||\mathbf{A}||_p ||\mathbf{A}^{-1}||_p\geq1$$
+where by the definition of the matrix $p$-norm, $\forall\mat{x},
+\mat{y}\neq\vc{0}$:
+$$||\mat{A}||_p=
+\max_{\mat{x}\neq\mat{0}}
+\left\{\frac{||\mat{A}\mat{x}||_p}{||\mat{x}||_p}\right\}$$
+$$||\mat{A}^{-1}||_p=
+\max_{\mat{y}\neq\mat{0}}
+\left\{\frac{||\mat{A}^{-1}\mat{y}||_p}{||\mat{y}||_p}\right\}$$
+and so we can bound the left hand side of our goal by:
+$$||\mathbf{A}||_p ||\mathbf{A}^{-1}||_p
+\geq
+\frac{||\mat{A}\mat{x}||_p}{||\mat{x}||_p}
+\frac{||\mat{A}^{-1}\mat{y}||_p}{||\mat{y}||_p}$$
+for any non-zero $\mat{x}$ and $\mat{y}$. But because matrix $\mat{A}$ is
+invertible, it actually defines a bijective linear map between $\mat{x}$ and
+$\mat{y}$ if we define relation $\mat{A}\mat{x}=\mat{y}$, which allow us to
+conveniently write:
+\begin{align*}
+    ||\mathbf{A}||_p ||\mathbf{A}^{-1}||_p
+    \geq
+    \frac{||\mat{A}\mat{x}||_p}{||\mat{x}||_p}
+    \frac{||\mat{A}^{-1}\mat{y}||_p}{||\mat{y}||_p}
+    &=
+    \frac{||\mat{y}||_p}{||\mat{A}^{-1}\mat{y}||_p}
+    \frac{||\mat{A}^{-1}\mat{y}||_p}{||\mat{y}||_p} \\
+    &=1
+\end{align*}
 
 \end{document}
